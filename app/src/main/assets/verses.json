@@ -1,0 +1,517 @@
+[
+  {
+    "text": "Be strong and courageous. Do not be afraid...",
+    "reference": "Joshua 1:9",
+    "tags": ["courage", "strength", "faith"]
+  },
+  {
+    "text": "Cast all your anxiety on him because he cares for you.",
+    "reference": "1 Peter 5:7",
+    "tags": ["anxiety", "trust", "peace"]
+  },
+  {
+    "text": "I can do all things through him who strengthens me.",
+    "reference": "Philippians 4:13",
+    "tags": ["strength", "endurance", "faith"]
+  },
+  {
+    "text": "For I know the plans I have for you, declares the Lord...",
+    "reference": "Jeremiah 29:11",
+    "tags": ["hope", "future", "trust"]
+  },
+  {
+    "text": "The Lord is my light and my salvation; whom shall I fear?",
+    "reference": "Psalm 27:1",
+    "tags": ["fear", "salvation", "light"]
+  },
+  {
+    "text": "Trust in the Lord with all your heart, and do not lean on your own understanding.",
+    "reference": "Proverbs 3:5",
+    "tags": ["trust", "guidance", "wisdom"]
+  },
+  {
+    "text": "Come to me, all who labor and are heavy laden, and I will give you rest.",
+    "reference": "Matthew 11:28",
+    "tags": ["rest", "comfort", "burden"]
+  },
+  {
+    "text": "Even though I walk through the valley of the shadow of death, I will fear no evil...",
+    "reference": "Psalm 23:4",
+    "tags": ["fear", "faith", "comfort"]
+  },
+  {
+    "text": "God is our refuge and strength, a very present help in trouble.",
+    "reference": "Psalm 46:1",
+    "tags": ["strength", "help", "refuge"]
+  },
+  {
+    "text": "So we fix our eyes not on what is seen, but on what is unseen...",
+    "reference": "2 Corinthians 4:18",
+    "tags": ["faith", "eternity", "hope"]
+  },
+  {
+    "text": "The Lord will fight for you; you need only to be still.",
+    "reference": "Exodus 14:14",
+    "tags": ["peace", "deliverance", "trust"]
+  },
+  {
+    "text": "Rejoice in hope, be patient in tribulation, be constant in prayer.",
+    "reference": "Romans 12:12",
+    "tags": ["hope", "patience", "prayer"]
+  },
+  {
+    "text": "Do not be anxious about anything, but in everything by prayer and supplication with thanksgiving let your requests be made known to God.",
+    "reference": "Philippians 4:6",
+    "tags": ["anxiety", "prayer", "peace"]
+  },
+  {
+    "text": "The steadfast love of the Lord never ceases; his mercies never come to an end.",
+    "reference": "Lamentations 3:22",
+    "tags": ["love", "mercy", "faithfulness"]
+  },
+  {
+    "text": "Blessed is the man who remains steadfast under trial.",
+    "reference": "James 1:12",
+    "tags": ["endurance", "trial", "reward"]
+  },
+  {
+    "text": "Your word is a lamp to my feet and a light to my path.",
+    "reference": "Psalm 119:105",
+    "tags": ["guidance", "truth", "light"]
+  },
+  {
+    "text": "Let all that you do be done in love.",
+    "reference": "1 Corinthians 16:14",
+    "tags": ["love", "action", "faith"]
+  },
+  {
+    "text": "He has told you, O man, what is good; and what does the Lord require of you but to do justice, and to love kindness, and to walk humbly with your God?",
+    "reference": "Micah 6:8",
+    "tags": ["justice", "kindness", "humility"]
+  },
+  {
+    "text": "In the beginning was the Word, and the Word was with God, and the Word was God.",
+    "reference": "John 1:1",
+    "tags": ["Jesus", "truth", "beginning"]
+  },
+  {
+    "text": "Create in me a clean heart, O God, and renew a right spirit within me.",
+    "reference": "Psalm 51:10",
+    "tags": ["repentance", "renewal", "heart"]
+  },
+  {
+    "text": "But seek first the kingdom of God and his righteousness, and all these things will be added to you.",
+    "reference": "Matthew 6:33",
+    "tags": ["priority", "faith", "provision"]
+  },
+  {
+    "text": "Therefore, if anyone is in Christ, he is a new creation. The old has passed away; behold, the new has come.",
+    "reference": "2 Corinthians 5:17",
+    "tags": ["new life", "salvation", "identity"]
+  },
+  {
+    "text": "And we know that in all things God works for the good of those who love him, who have been called according to his purpose.",
+    "reference": "Romans 8:28",
+    "tags": ["purpose", "trust", "goodness"]
+  },
+  {
+    "text": "The name of the Lord is a strong tower; the righteous man runs into it and is safe.",
+    "reference": "Proverbs 18:10",
+    "tags": ["safety", "protection", "refuge"]
+  },
+  {
+    "text": "Even youths shall faint and be weary, and young men shall fall exhausted; but they who wait for the Lord shall renew their strength.",
+    "reference": "Isaiah 40:30-31",
+    "tags": ["strength", "waiting", "renewal"]
+  },
+  {
+    "text": "The Lord is near to the brokenhearted and saves the crushed in spirit.",
+    "reference": "Psalm 34:18",
+    "tags": ["comfort", "grief", "hope"]
+  },
+  {
+    "text": "Jesus Christ is the same yesterday and today and forever.",
+    "reference": "Hebrews 13:8",
+    "tags": ["faithfulness", "eternity", "Jesus"]
+  },
+  {
+    "text": "For all have sinned and fall short of the glory of God.",
+    "reference": "Romans 3:23",
+    "tags": ["sin", "truth", "grace"]
+  },
+  {
+    "text": "But God shows his love for us in that while we were still sinners, Christ died for us.",
+    "reference": "Romans 5:8",
+    "tags": ["love", "grace", "sacrifice"]
+  },
+  {
+    "text": "The Lord is good, a stronghold in the day of trouble; he knows those who take refuge in him.",
+    "reference": "Nahum 1:7",
+    "tags": ["goodness", "trust", "refuge"]
+  },
+  {
+    "text": "Blessed are the peacemakers, for they shall be called sons of God.",
+    "reference": "Matthew 5:9",
+    "tags": ["peace", "blessing", "identity"]
+  },
+  {
+    "text": "Delight yourself in the Lord, and he will give you the desires of your heart.",
+    "reference": "Psalm 37:4",
+    "tags": ["joy", "desire", "trust"]
+  },
+  {
+    "text": "He must increase, but I must decrease.",
+    "reference": "John 3:30",
+    "tags": ["humility", "submission", "Jesus"]
+  },
+  {
+    "text": "The Lord is my strength and my shield; in him my heart trusts, and I am helped.",
+    "reference": "Psalm 28:7",
+    "tags": ["strength", "trust", "protection"]
+  },
+  {
+    "text": "He gives power to the faint, and to him who has no might he increases strength.",
+    "reference": "Isaiah 40:29",
+    "tags": ["strength", "help", "endurance"]
+  },
+  {
+    "text": "Therefore encourage one another and build one another up, just as you are doing.",
+    "reference": "1 Thessalonians 5:11",
+    "tags": ["encouragement", "community", "kindness"]
+  },
+  {
+    "text": "Let everything that has breath praise the Lord!",
+    "reference": "Psalm 150:6",
+    "tags": ["praise", "worship", "joy"]
+  },
+  {
+    "text": "And above all these put on love, which binds everything together in perfect harmony.",
+    "reference": "Colossians 3:14",
+    "tags": ["love", "unity", "harmony"]
+  },
+  {
+    "text": "Whoever does not love does not know God, because God is love.",
+    "reference": "1 John 4:8",
+    "tags": ["love", "God", "relationship"]
+  },
+  {
+    "text": "Let us not grow weary of doing good, for in due season we will reap, if we do not give up.",
+    "reference": "Galatians 6:9",
+    "tags": ["perseverance", "goodness", "reward"]
+  },
+  {
+    "text": "The Lord is slow to anger and abounding in steadfast love, forgiving iniquity and transgression.",
+    "reference": "Numbers 14:18",
+    "tags": ["patience", "forgiveness", "love"]
+  },
+  {
+    "text": "For the Spirit God gave us does not make us timid, but gives us power, love and self-discipline.",
+    "reference": "2 Timothy 1:7",
+    "tags": ["power", "love", "discipline"]
+  },
+  {
+    "text": "As iron sharpens iron, so one person sharpens another.",
+    "reference": "Proverbs 27:17",
+    "tags": ["friendship", "growth", "discipleship"]
+  },
+  {
+    "text": "Taste and see that the Lord is good; blessed is the one who takes refuge in him.",
+    "reference": "Psalm 34:8",
+    "tags": ["goodness", "blessing", "refuge"]
+  },
+  {
+    "text": "My grace is sufficient for you, for my power is made perfect in weakness.",
+    "reference": "2 Corinthians 12:9",
+    "tags": ["grace", "weakness", "power"]
+  },
+  {
+    "text": "A gentle answer turns away wrath, but a harsh word stirs up anger.",
+    "reference": "Proverbs 15:1",
+    "tags": ["gentleness", "wisdom", "peace"]
+  },
+  {
+    "text": "But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, and self-control.",
+    "reference": "Galatians 5:22-23",
+    "tags": ["fruit", "spirit", "character"]
+  },
+  {
+    "text": "He will cover you with his feathers, and under his wings you will find refuge.",
+    "reference": "Psalm 91:4",
+    "tags": ["protection", "comfort", "refuge"]
+  },
+  {
+    "text": "Do not let your hearts be troubled. Trust in God; trust also in me.",
+    "reference": "John 14:1",
+    "tags": ["trust", "peace", "Jesus"]
+  },
+  {
+    "text": "The Lord is my rock, my fortress and my deliverer.",
+    "reference": "Psalm 18:2",
+    "tags": ["strength", "protection", "deliverance"]
+  },
+  {
+    "text": "Faith is the assurance of things hoped for, the conviction of things not seen.",
+    "reference": "Hebrews 11:1",
+    "tags": ["faith", "hope", "trust"]
+  },
+  {
+    "text": "Be still, and know that I am God.",
+    "reference": "Psalm 46:10",
+    "tags": ["stillness", "trust", "faith"]
+  },
+  {
+    "text": "Set your minds on things above, not on earthly things.",
+    "reference": "Colossians 3:2",
+    "tags": ["focus", "eternity", "discipline"]
+  },
+  {
+    "text": "Do everything in love.",
+    "reference": "1 Corinthians 16:14",
+    "tags": ["love", "action", "obedience"]
+  },
+  {
+    "text": "When I am afraid, I put my trust in you.",
+    "reference": "Psalm 56:3",
+    "tags": ["fear", "trust", "peace"]
+  },
+  {
+    "text": "The fear of the Lord is the beginning of wisdom.",
+    "reference": "Proverbs 9:10",
+    "tags": ["wisdom", "reverence", "foundation"]
+  },
+  {
+    "text": "Let your light shine before others, that they may see your good deeds and glorify your Father in heaven.",
+    "reference": "Matthew 5:16",
+    "tags": ["witness", "goodness", "glory"]
+  },
+  {
+    "text": "For we walk by faith, not by sight.",
+    "reference": "2 Corinthians 5:7",
+    "tags": ["faith", "trust", "perseverance"]
+  },
+  {
+    "text": "The Lord is close to the brokenhearted and saves those who are crushed in spirit.",
+    "reference": "Psalm 34:18",
+    "tags": ["comfort", "grief", "hope"]
+  },
+  {
+    "text": "Whoever believes in the Son has eternal life.",
+    "reference": "John 3:36",
+    "tags": ["belief", "salvation", "eternity"]
+  },
+  {
+    "text": "Above all else, guard your heart, for everything you do flows from it.",
+    "reference": "Proverbs 4:23",
+    "tags": ["wisdom", "guard", "heart"]
+  },
+  {
+    "text": "Therefore, if you have any encouragement from being united with Christ, if any comfort from his love... then make my joy complete by being like-minded.",
+    "reference": "Philippians 2:1-2",
+    "tags": ["unity", "love", "encouragement"]
+  },
+  {
+    "text": "You will keep in perfect peace those whose minds are steadfast, because they trust in you.",
+    "reference": "Isaiah 26:3",
+    "tags": ["peace", "trust", "steadfastness"]
+  },
+  {
+    "text": "For where two or three gather in my name, there am I with them.",
+    "reference": "Matthew 18:20",
+    "tags": ["community", "presence", "prayer"]
+  },
+  {
+    "text": "And my God will supply every need of yours according to his riches in glory in Christ Jesus.",
+    "reference": "Philippians 4:19",
+    "tags": ["provision", "faith", "trust"]
+  },
+  {
+    "text": "So if the Son sets you free, you will be free indeed.",
+    "reference": "John 8:36",
+    "tags": ["freedom", "Jesus", "salvation"]
+  },
+  {
+    "text": "In peace I will lie down and sleep, for you alone, O Lord, will keep me safe.",
+    "reference": "Psalm 4:8",
+    "tags": ["peace", "safety", "rest"]
+  },
+  {
+    "text": "Do not be overcome by evil, but overcome evil with good.",
+    "reference": "Romans 12:21",
+    "tags": ["goodness", "victory", "faith"]
+  },
+  {
+    "text": "The Lord your God is with you, the Mighty Warrior who saves. He will take great delight in you.",
+    "reference": "Zephaniah 3:17",
+    "tags": ["joy", "deliverance", "presence"]
+  },
+  {
+    "text": "For the word of God is alive and active. Sharper than any double-edged sword...",
+    "reference": "Hebrews 4:12",
+    "tags": ["scripture", "power", "truth"]
+  },
+  {
+    "text": "And we know that the Son of God has come and has given us understanding...",
+    "reference": "1 John 5:20",
+    "tags": ["understanding", "truth", "Jesus"]
+  },
+  {
+    "text": "The Lord is my shepherd; I shall not want.",
+    "reference": "Psalm 23:1",
+    "tags": ["provision", "peace", "guidance"]
+  },
+  {
+    "text": "Who shall separate us from the love of Christ?",
+    "reference": "Romans 8:35",
+    "tags": ["love", "security", "Christ"]
+  },
+  {
+    "text": "You are the light of the world. A city set on a hill cannot be hidden.",
+    "reference": "Matthew 5:14",
+    "tags": ["identity", "witness", "light"]
+  },
+  {
+    "text": "I sought the Lord, and he answered me; he delivered me from all my fears.",
+    "reference": "Psalm 34:4",
+    "tags": ["fear", "deliverance", "prayer"]
+  },
+  {
+    "text": "Draw near to God, and he will draw near to you.",
+    "reference": "James 4:8",
+    "tags": ["closeness", "devotion", "relationship"]
+  },
+  {
+    "text": "But he was pierced for our transgressions; he was crushed for our iniquities...",
+    "reference": "Isaiah 53:5",
+    "tags": ["sacrifice", "healing", "atonement"]
+  },
+  {
+    "text": "Commit your way to the Lord; trust in him, and he will act.",
+    "reference": "Psalm 37:5",
+    "tags": ["trust", "faith", "action"]
+  },
+  {
+    "text": "And whatever you do, in word or deed, do everything in the name of the Lord Jesus.",
+    "reference": "Colossians 3:17",
+    "tags": ["discipline", "worship", "Jesus"]
+  },
+  {
+    "text": "Have I not commanded you? Be strong and courageous. Do not be afraid...",
+    "reference": "Joshua 1:9",
+    "tags": ["courage", "strength", "obedience"]
+  },
+  {
+    "text": "For it is by grace you have been saved, through faith—and this is not from yourselves, it is the gift of God.",
+    "reference": "Ephesians 2:8",
+    "tags": ["grace", "faith", "salvation"]
+  },
+  {
+    "text": "Let the peace of Christ rule in your hearts, since as members of one body you were called to peace. And be thankful.",
+    "reference": "Colossians 3:15",
+    "tags": ["peace", "unity", "gratitude"]
+  },
+  {
+    "text": "The grass withers, the flower fades, but the word of our God will stand forever.",
+    "reference": "Isaiah 40:8",
+    "tags": ["scripture", "eternity", "truth"]
+  },
+  {
+    "text": "Come near to God and he will come near to you.",
+    "reference": "James 4:8",
+    "tags": ["presence", "intimacy", "devotion"]
+  },
+  {
+    "text": "Do not store up for yourselves treasures on earth, where moth and rust destroy...",
+    "reference": "Matthew 6:19-20",
+    "tags": ["eternity", "generosity", "focus"]
+  },
+  {
+    "text": "Be kind and compassionate to one another, forgiving each other, just as in Christ God forgave you.",
+    "reference": "Ephesians 4:32",
+    "tags": ["kindness", "forgiveness", "love"]
+  },
+  {
+    "text": "The Lord is my light and my salvation—whom shall I fear?",
+    "reference": "Psalm 27:1",
+    "tags": ["light", "salvation", "fear"]
+  },
+  {
+    "text": "Therefore encourage one another and build each other up, just as in fact you are doing.",
+    "reference": "1 Thessalonians 5:11",
+    "tags": ["encouragement", "unity", "love"]
+  },
+  {
+    "text": "Better is one day in your courts than a thousand elsewhere.",
+    "reference": "Psalm 84:10",
+    "tags": ["worship", "presence", "delight"]
+  },
+  {
+    "text": "But seek first his kingdom and his righteousness, and all these things will be given to you as well.",
+    "reference": "Matthew 6:33",
+    "tags": ["priority", "faith", "trust"]
+  },
+  {
+    "text": "A cheerful heart is good medicine, but a crushed spirit dries up the bones.",
+    "reference": "Proverbs 17:22",
+    "tags": ["joy", "health", "attitude"]
+  },
+  {
+    "text": "In the same way, let your light shine before others...",
+    "reference": "Matthew 5:16",
+    "tags": ["light", "witness", "glory"]
+  },
+  {
+    "text": "The name of the Lord is a fortified tower; the righteous run to it and are safe.",
+    "reference": "Proverbs 18:10",
+    "tags": ["safety", "refuge", "name"]
+  },
+  {
+    "text": "He will wipe away every tear from their eyes, and death shall be no more...",
+    "reference": "Revelation 21:4",
+    "tags": ["hope", "eternity", "comfort"]
+  },
+  {
+    "text": "Let us hold unswervingly to the hope we profess, for he who promised is faithful.",
+    "reference": "Hebrews 10:23",
+    "tags": ["faithfulness", "hope", "endurance"]
+  },
+  {
+    "text": "Blessed are those who hunger and thirst for righteousness, for they shall be satisfied.",
+    "reference": "Matthew 5:6",
+    "tags": ["righteousness", "desire", "blessing"]
+  },
+  {
+    "text": "I have hidden your word in my heart that I might not sin against you.",
+    "reference": "Psalm 119:11",
+    "tags": ["scripture", "obedience", "heart"]
+  },
+  {
+    "text": "For the Lord your God goes with you; he will never leave you nor forsake you.",
+    "reference": "Deuteronomy 31:6",
+    "tags": ["presence", "courage", "promise"]
+  },
+  {
+    "text": "Let your conversation be always full of grace, seasoned with salt...",
+    "reference": "Colossians 4:6",
+    "tags": ["speech", "grace", "wisdom"]
+  },
+  {
+    "text": "The Lord is good to those whose hope is in him, to the one who seeks him.",
+    "reference": "Lamentations 3:25",
+    "tags": ["goodness", "hope", "seek"]
+  },
+  {
+    "text": "So faith comes from hearing, and hearing through the word of Christ.",
+    "reference": "Romans 10:17",
+    "tags": ["faith", "scripture", "growth"]
+  },
+  {
+    "text": "For our light and momentary troubles are achieving for us an eternal glory that far outweighs them all.",
+    "reference": "2 Corinthians 4:17",
+    "tags": ["suffering", "glory", "eternity"]
+  },
+  {
+    "text": "Let everything you do be done in love.",
+    "reference": "1 Corinthians 16:14",
+    "tags": ["love", "action", "faithfulness"]
+  }
+]
