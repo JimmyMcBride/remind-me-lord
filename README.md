@@ -4,8 +4,6 @@
 verses tailored to their current mood, struggle, or need. It’s designed to blend spiritual
 encouragement with clean, modern design and thoughtful user experience.
 
----
-
 ## ✨ Vision
 
 The goal is to build a **context-aware lock screen and widget app** that:
@@ -19,8 +17,6 @@ The goal is to build a **context-aware lock screen and widget app** that:
 The long-term idea is to help people carry Scripture with them every day, with personalization and a
 sense of gentle divine nudging.
 
----
-
 ## ✅ What's Been Built So Far
 
 - 🔍 **Home Screen UI** with:
@@ -32,8 +28,6 @@ sense of gentle divine nudging.
 - 🧠 **Custom Tag Ordering**: Selected tags appear first in the UI for a better UX
 - ⚡ **Offline-first design** using **Room** as the local database
 - 🔌 Dependency injection powered by **Hilt**
-
----
 
 ## 🛠 Technical Highlights
 
@@ -68,8 +62,6 @@ dao.insertAll(verses.map { it.toEntity() })
 
 The database is initially populated with tagged verses from a local JSON file.
 
----
-
 ## 🔜 What's Coming Next
 
 - 📱 **Home screen widget** with auto-refresh daily
@@ -78,19 +70,13 @@ The database is initially populated with tagged verses from a local JSON file.
 - 🌙 Dark mode theming
 - ☁️ Sync + cloud backup (future vision)
 
----
-
 ## 🙌 Contributing
 
 This is currently a solo project, but I'm always open to feedback and ideas! Want to help test,
 contribute a verse pack, or work on a feature together? Let’s connect.
 
----
-
 ## 📖 License
 
 This project is open source and freely available under the MIT License.
-
----
 
 > _“Your word is a lamp to my feet and a light to my path.” — Psalm 119:105_
