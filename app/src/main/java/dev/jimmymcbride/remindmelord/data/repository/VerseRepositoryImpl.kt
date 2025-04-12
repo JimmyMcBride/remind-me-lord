@@ -1,10 +1,18 @@
 package dev.jimmymcbride.remindmelord.data.repository
 
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.PagingData
+import androidx.paging.map
+import androidx.sqlite.db.SimpleSQLiteQuery
+import androidx.sqlite.db.SupportSQLiteQuery
+import dev.jimmymcbride.remindmelord.data.entites.VerseEntity
 import dev.jimmymcbride.remindmelord.data.local.VerseDao
 import dev.jimmymcbride.remindmelord.data.mapper.toDomain
-import dev.jimmymcbride.remindmelord.data.entites.VerseEntity
 import dev.jimmymcbride.remindmelord.domain.models.Verse
 import dev.jimmymcbride.remindmelord.domain.repository.VerseRepository
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 
 /**
  * Implementation of [VerseRepository] that interacts with the local Room database
@@ -17,37 +25,68 @@ import dev.jimmymcbride.remindmelord.domain.repository.VerseRepository
 class VerseRepositoryImpl(
     private val dao: VerseDao
 ) : VerseRepository {
-    /**
-     * Retrieves all verses from the local database and maps them to domain models.
-     *
-     * @return A list of all verses as [Verse].
-     */
-    override suspend fun getAll(): List<Verse> =
-        dao.getAll().map { it.toDomain() }
 
-    /**
-     * Retrieves a single random verse from the local database.
-     *
-     * @return A random [Verse], or null if the database is empty.
-     */
+    override fun getFilteredPaged(query: String?, tags: List<String>): Flow<PagingData<Verse>> {
+        return Pager(
+            config = PagingConfig(pageSize = 20),
+            pagingSourceFactory = {
+                dao.getFilteredPagedRaw(buildVerseQuery(query, tags))
+            }
+        ).flow.map { pagingData -> pagingData.map { it.toDomain() } }
+    }
+
     override suspend fun getRandomVerse(): Verse? =
         dao.getRandomVerse()?.toDomain()
 
-    /**
-     * Retrieves a random verse that matches the given tag.
-     *
-     * @param tag The tag used to filter verses.
-     * @return A random [Verse] that contains the tag, or null if no match is found.
-     */
+    override suspend fun getAllTags(): List<String> {
+        return dao.getAllTags()
+            .flatMap { it.split(",") }
+            .map { it.trim().lowercase() }
+            .distinct()
+            .sorted()
+    }
+
     override suspend fun getRandomVerseByTag(tag: String): Verse? =
         dao.getRandomVerseByTag(tag)?.toDomain()
 
     /**
-     * Retrieves all verses that match the given tag.
+     * Builds a dynamic [SupportSQLiteQuery] that filters verses by search term and tags.
      *
-     * @param tag The tag used to filter verses.
-     * @return A list of [Verse] that match the tag.
+     * The resulting SQL query:
+     * - Matches verses where `text` or `reference` contains the [query] string (if not null/blank).
+     * - Matches any verses where the `tags` column contains any of the provided [tags] strings.
+     *   This is implemented using `LIKE` conditions, assuming tags are stored as a comma-separated string.
+     * - Results are ordered by ID in ascending order.
+     *
+     * This query is safe and parameterized to prevent SQL injection.
+     *
+     * @param query The optional search string for filtering by text or reference.
+     * @param tags A list of tags to filter verses by. Matches any verse containing at least one tag.
+     * @return A [SupportSQLiteQuery] object to be passed to a DAO method annotated with [RawQuery].
      */
-    override suspend fun getVersesByTag(tag: String): List<Verse> =
-        dao.getVersesByTag(tag).map { it.toDomain() }
+    private fun buildVerseQuery(query: String?, tags: List<String>): SupportSQLiteQuery {
+        val sql = StringBuilder("SELECT * FROM verses WHERE 1=1")
+        val args = mutableListOf<Any>()
+
+        // Search filter
+        query?.takeIf { it.isNotBlank() }?.let {
+            sql.append(" AND (text LIKE ? OR reference LIKE ?)")
+            args.add("%$it%")
+            args.add("%$it%")
+        }
+
+        // Tags filter
+        if (tags.isNotEmpty()) {
+            sql.append(" AND (")
+            sql.append(tags.joinToString(" OR ") {
+                "tags LIKE ?"
+            })
+            tags.forEach { tag -> args.add("%$tag%") }
+            sql.append(")")
+        }
+
+        sql.append(" ORDER BY id ASC")
+
+        return SimpleSQLiteQuery(sql.toString(), args.toTypedArray())
+    }
 }
