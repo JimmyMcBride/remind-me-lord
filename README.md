@@ -80,3 +80,6 @@ contribute a verse pack, or work on a feature together? Let’s connect.
 This project is open source and freely available under the MIT License.
 
 > _“Your word is a lamp to my feet and a light to my path.” — Psalm 119:105_
+
+[remindmelord-search-filter-tags-demo.webm](https://github.com/user-attachments/assets/c5d90685-733e-4c55-8ff7-e1e6a9e6d9e0)
+
