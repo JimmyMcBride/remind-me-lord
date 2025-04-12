@@ -20,8 +20,11 @@ fun AppNavHost(navController: NavHostController = rememberNavController()) {
         composable(Routes.Home.name) {
             val homeViewModel: HomeViewModel = hiltViewModel()
             HomeScreen(
-                uiState = homeViewModel.uiState,
-                populateVerses = homeViewModel::populateVerses,
+                searchQueryState = homeViewModel.searchQuery,
+                selectedTagsState = homeViewModel.selectedTags,
+                versePagingFlow = homeViewModel.versePagingFlow,
+                allTagsState = homeViewModel.allTags,
+                getAllTags = homeViewModel::getAllTags,
                 navigateToSettingsScreen = { navController.navigate(Routes.Settings.name) },
                 navigateToAddVerseScreen = { navController.navigate(Routes.Settings.name) },
                 onSearchQueryChanged = homeViewModel::onSearchQueryChanged,

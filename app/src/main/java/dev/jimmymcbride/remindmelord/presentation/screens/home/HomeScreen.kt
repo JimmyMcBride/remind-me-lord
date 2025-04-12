@@ -16,6 +16,7 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FloatingActionButton
@@ -32,23 +33,33 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.paging.LoadState
+import androidx.paging.PagingData
+import androidx.paging.compose.collectAsLazyPagingItems
 import dev.jimmymcbride.remindmelord.domain.models.Verse
 import dev.jimmymcbride.remindmelord.presentation.ui.theme.PADDING_MED
+import kotlinx.coroutines.flow.Flow
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
-    uiState: State<VerseUiState>,
-    populateVerses: () -> Unit,
+    searchQueryState: State<String>,
+    selectedTagsState: State<List<String>>,
+    versePagingFlow: Flow<PagingData<Verse>>,
+    allTagsState: State<List<String>>,
+    getAllTags: () -> Unit,
     navigateToSettingsScreen: () -> Unit,
     navigateToAddVerseScreen: () -> Unit,
     onSearchQueryChanged: (String) -> Unit,
     onToggleTag: (String) -> Unit,
 ) {
-    val state by uiState
+    val searchQuery by searchQueryState
+    val selectedTags by selectedTagsState
+    val allTags by allTagsState
+    val verses = versePagingFlow.collectAsLazyPagingItems()
 
     LaunchedEffect(Unit) {
-        populateVerses()
+        getAllTags()
     }
 
     Scaffold(
@@ -77,7 +88,7 @@ fun HomeScreen(
         ) {
             // Search bar
             OutlinedTextField(
-                value = state.searchQuery,
+                value = searchQuery,
                 onValueChange = onSearchQueryChanged,
                 label = { Text("Search") },
                 modifier = Modifier.fillMaxWidth()
@@ -85,19 +96,39 @@ fun HomeScreen(
 
             Spacer(Modifier.height(8.dp))
 
+            // Smart tag sorting: selected tags first (in order), then the rest alphabetically
+            val tags = buildList {
+                addAll(selectedTags)
+                addAll(allTags.filterNot { it in selectedTags }.sorted())
+            }
+
             // Tag filter row
             TagFilterRow(
-                tags = getAllTagsFromVerses(state.allVerses),
-                selected = state.selectedTags,
+                tags = tags,
+                selected = selectedTags.toSet(),
                 onToggle = onToggleTag
             )
 
             Spacer(Modifier.height(16.dp))
 
-            // Verse list
             LazyColumn {
-                items(state.filteredVerses) { verse ->
-                    VerseItem(verse)
+                items(verses.itemCount) { index ->
+                    val verse = verses[index]
+                    if (verse != null) {
+                        VerseItem(verse)
+                    }
+                }
+
+                when (verses.loadState.append) {
+                    is LoadState.Loading -> item {
+                        CircularProgressIndicator(modifier = Modifier.padding(16.dp))
+                    }
+
+                    is LoadState.Error -> item {
+                        Text("Error loading more", color = MaterialTheme.colorScheme.error)
+                    }
+
+                    else -> {}
                 }
             }
         }
@@ -141,10 +172,4 @@ fun VerseItem(verse: Verse) {
             }
         }
     }
-}
-
-fun getAllTagsFromVerses(verses: List<Verse>): List<String> {
-    return verses.flatMap { it.tags }
-        .distinct()
-        .sorted()
 }
