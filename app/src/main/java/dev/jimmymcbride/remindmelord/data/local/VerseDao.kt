@@ -69,4 +69,39 @@ interface VerseDao {
         """
     )
     suspend fun getRandomVerseByTag(tag: String): VerseEntity?
+
+    /**
+     * Returns the total number of verses currently stored in the database.
+     *
+     * This can be used to determine if the database has already been seeded
+     * or if it is a fresh install with no existing verse data.
+     *
+     * @return The number of [VerseEntity] records in the `verses` table.
+     */
+    @Query("SELECT COUNT(*) FROM verses")
+    suspend fun getVerseCount(): Int
+
+    /**
+     * Inserts a single [VerseEntity] into the database.
+     *
+     * If a verse with the same primary key already exists, it will be replaced.
+     * This method is typically used when adding a new verse during seeding or user input.
+     *
+     * @param verse The [VerseEntity] to insert.
+     */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(verse: VerseEntity)
+
+    /**
+     * Finds a verse in the database that exactly matches the given `text` and `reference`.
+     *
+     * This is used during seeding to check if a verse already exists,
+     * so that duplicates are not inserted across app updates.
+     *
+     * @param text The verse content to match.
+     * @param reference The verse reference to match (e.g., "John 3:16").
+     * @return The matching [VerseEntity], or null if no match is found.
+     */
+    @Query("SELECT * FROM verses WHERE text = :text AND reference = :reference LIMIT 1")
+    suspend fun findVerse(text: String, reference: String): VerseEntity?
 }

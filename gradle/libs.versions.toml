@@ -16,9 +16,12 @@ mockitoKotlin = "4.0.0"
 mockitoInline = "4.5.1"
 coroutinesTest = "1.7.3"
 kotlinxSerialization = "1.8.0"
-paging = "3.2.1"
+paging = "3.3.6"
+datastore = "1.1.4"
 
 [libraries]
+#androidx-core = { group = "androidx.core", name = "core", version = "coreKtx" }
+androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }

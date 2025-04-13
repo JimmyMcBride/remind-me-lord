@@ -9,8 +9,9 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import dev.jimmymcbride.remindmelord.data.local.VerseDao
 import dev.jimmymcbride.remindmelord.data.local.VerseDatabase
-import dev.jimmymcbride.remindmelord.data.local.seeder.SeedDatabase
+import dev.jimmymcbride.remindmelord.data.repository.SeederRepositoryImpl
 import dev.jimmymcbride.remindmelord.data.repository.VerseRepositoryImpl
+import dev.jimmymcbride.remindmelord.domain.repository.SeederRepository
 import dev.jimmymcbride.remindmelord.domain.repository.VerseRepository
 import javax.inject.Singleton
 
@@ -37,5 +38,9 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun providesSeedDatabase(@ApplicationContext context: Context, dao: VerseDao) = SeedDatabase(context, dao)
+    fun providesSeederRepository(
+        @ApplicationContext context: Context,
+        dao: VerseDao
+    ): SeederRepository =
+        SeederRepositoryImpl(context, dao)
 }

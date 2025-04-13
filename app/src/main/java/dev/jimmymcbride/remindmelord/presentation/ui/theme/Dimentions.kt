@@ -7,3 +7,5 @@ val PADDING_SM = 8.dp
 val PADDING_MED = 16.dp
 val PADDING_LG = 24.dp
 val PADDING_XLG = 32.dp
+
+val SPACE_MED = 12.dp

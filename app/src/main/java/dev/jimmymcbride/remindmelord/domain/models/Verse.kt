@@ -11,7 +11,7 @@ package dev.jimmymcbride.remindmelord.domain.models
  * @property tags A list of tags used to categorize or filter the verse.
  */
 data class Verse(
-    val id: Int,
+    val id: Int = 0,
     val text: String,
     val reference: String,
     val tags: List<String>

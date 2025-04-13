@@ -49,6 +49,16 @@ class VerseRepositoryImpl(
     override suspend fun getRandomVerseByTag(tag: String): Verse? =
         dao.getRandomVerseByTag(tag)?.toDomain()
 
+    override suspend fun addVerse(verse: Verse) {
+        dao.insert(
+            VerseEntity(
+                text = verse.text.trim(),
+                reference = verse.reference.trim(),
+                tags = verse.tags.map { it.trim().lowercase() }
+            )
+        )
+    }
+
     /**
      * Builds a dynamic [SupportSQLiteQuery] that filters verses by search term and tags.
      *

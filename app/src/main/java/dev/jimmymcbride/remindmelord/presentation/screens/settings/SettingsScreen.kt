@@ -18,13 +18,13 @@ import dev.jimmymcbride.remindmelord.presentation.ui.theme.PADDING_MED
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen(
-    navigateBack: () -> Unit
+    navigateBack: () -> Unit,
 ) {
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         topBar = {
             TopAppBar(
-                title = { Text("Remind Me, Lord") },
+                title = { Text("Settings") },
                 navigationIcon = {
                     IconButton(onClick = navigateBack) {
                         Icon(Icons.Filled.ArrowBack, contentDescription = "Back")
@@ -33,9 +33,11 @@ fun SettingsScreen(
             )
         },
     ) { innerPadding ->
-        Column(Modifier
-            .padding(innerPadding)
-            .padding(PADDING_MED)) {
+        Column(
+            Modifier
+                .padding(innerPadding)
+                .padding(PADDING_MED)
+        ) {
             Text("Settings Screen")
         }
     }

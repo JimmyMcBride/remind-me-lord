@@ -55,4 +55,16 @@ interface VerseRepository {
      * @return A random [Verse] that contains the tag, or null if no match is found.
      */
     suspend fun getRandomVerseByTag(tag: String): Verse?
+
+    /**
+     * Inserts a new verse into the database.
+     *
+     * This method is used when the user adds a custom verse manually.
+     * It expects a [Verse] object with `text`, `reference`, and `tags`.
+     *
+     * The [Verse.id] field can be omitted or set to 0, as Room will auto-generate it.
+     *
+     * @param verse The verse to insert into the local database.
+     */
+    suspend fun addVerse(verse: Verse)
 }

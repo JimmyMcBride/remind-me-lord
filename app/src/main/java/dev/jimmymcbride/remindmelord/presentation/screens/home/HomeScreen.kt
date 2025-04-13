@@ -25,14 +25,18 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.State
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavBackStackEntry
 import androidx.paging.LoadState
 import androidx.paging.PagingData
 import androidx.paging.compose.collectAsLazyPagingItems
@@ -52,18 +56,33 @@ fun HomeScreen(
     navigateToAddVerseScreen: () -> Unit,
     onSearchQueryChanged: (String) -> Unit,
     onToggleTag: (String) -> Unit,
+    currentBackstackEntry: NavBackStackEntry?,
 ) {
     val searchQuery by searchQueryState
     val selectedTags by selectedTagsState
     val allTags by allTagsState
     val verses = versePagingFlow.collectAsLazyPagingItems()
 
+    val snackbarHostState = remember { SnackbarHostState() }
+    val currentBackStackEntry = remember { currentBackstackEntry }
+    val savedStateHandle = currentBackStackEntry?.savedStateHandle
+
     LaunchedEffect(Unit) {
         getAllTags()
     }
 
+
+    LaunchedEffect(savedStateHandle) {
+        val wasVerseAdded = savedStateHandle?.get<Boolean>("verse_added") == true
+        if (wasVerseAdded) {
+            savedStateHandle.remove<Boolean>("verse_added")
+            snackbarHostState.showSnackbar("Verse added successfully!")
+        }
+    }
+
     Scaffold(
         modifier = Modifier.fillMaxSize(),
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
                 title = { Text("Remind Me, Lord") },
